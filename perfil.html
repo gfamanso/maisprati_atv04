@@ -1,0 +1,85 @@
+<!DOCTYPE html> <!-- Diz ao navegador que este é um documento HTML5 -->
+<html lang="pt-BR"> <!-- informa que o conteúdo está em português (Brasil) -->
+<head> <!-- Abertura da parte de configurações da página (não visível na tela) --> 
+  <meta charset="UTF-8" /> <!-- Define o padrão de codificação de caracteres como UTF-8, que suporta acentuação e outros símbolos. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Faz o site funcionar bem em celulares (responsivo). 
+  width=device-width → ajusta para a largura da tela do dispositivo.
+  initial-scale=1.0 → define o zoom inicial. -->
+
+  <title>Meu Perfil</title> <!-- Título que aparece na aba do navegador. -->
+  <link rel="stylesheet" href="styles.css" /> <!-- Conecta o HTML com o arquivo de estilos CSS. -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> <!-- -->
+
+</head> 
+<body> <!-- Fecha o <head> e abre o corpo visível do site. -->
+
+  <header> <!-- seção de cabeçalho do site (topo) -->
+    <h1>Gabriel Manso</h1> <!-- título principal da página (nome) --> 
+    <img src="https://super.abril.com.br/wp-content/uploads/2018/07/56c21ea682bee10ed5025b60todo-mundo-odeia-o-chris-11.jpeg?crop=1&resize=1212,909"
+    alt="Minha foto de perfil" 
+    width="150" /> <!-- imagem de perfil 
+    src é o caminho do arquivo.
+    alt é o texto alternativo (para acessibilidade).
+    width="150" define a largura da imagem. -->
+    <p>Desenvolvedor em formação | JavaScript & Web</p> <!-- parágrafo com uma breve descrição -->
+  </header>
+
+  <nav> <!-- menu de navegação -->
+    <ul> <!-- lista não ordenada (com marcadores) -->
+      <li><a href="#sobre">Sobre mim</a></li> <!-- <li>: cada item da lista.
+        <a href="#..."> → âncoras que rolam a página até uma seção com o id correspondente. -->
+      <li><a href="#habilidades">Habilidades</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main> <!-- conteúdo principal da página -->
+
+    <section id="sobre"> <!-- <section>: bloco temático.
+      id="sobre": serve para âncoras (ex: link "#sobre" lá no menu) -->
+      <h2>Sobre mim</h2> <!-- subtítulo da seção -->
+      <p>Sou estudante de desenvolvimento web, focado em HTML, CSS e JavaScript. Estou criando meu primeiro site para aprender na prática.</p> 
+      <!-- parágrafo com texto -->
+    </section>
+
+    <section id="habilidades">  <!-- <section>: bloco temático.
+      id=" ": serve para âncoras -->
+      <h2>Habilidades</h2> <!-- subtítulo da seção -->
+      <ul>
+        <li>HTML5 Semântico</li> <!-- <li>: cada item da lista. -->
+        <li>CSS3 com Flexbox</li>
+        <li>Lógica de programação em JavaScript</li>
+      </ul>
+    </section>
+
+    <section id="projetos"> <!-- <section>: bloco temático. -->
+      <h2>Projetos</h2> <!-- subtítulo da seção -->
+
+      <article> <!-- usado para conteúdo independente, como posts ou projetos. -->
+        <h3>Projeto 1: Página de perfil</h3> <!-- subtítulo do article -->
+        <p>Site simples com HTML e CSS criado para praticar estrutura semântica e layout.</p>
+      </article>
+
+    <section id="contato">
+      <h2>Contato</h2> <!-- subtítulo da seção -->
+      <p>E-mail: gabriel@email.com</p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/gabrielmanso">linkedin.com/in/gabrielmanso</a></p>
+    </section>
+
+  </main>
+
+  <aside> <!-- conteúdo complementar, como links de redes sociais -->
+    <h2>Redes sociais</h2> <!-- subtítulo da seção -->
+    <ul>
+      <li><a href="https://github.com/gfamanso" target="_blank">GitHub</a></li>
+      
+    </ul>
+  </aside>
+
+  <footer> <!-- rodapé da página -->
+    <p>&copy; 2025 Gabriel Manso. Todos os direitos reservados.</p>
+  </footer>
+
+</body> <!-- Fechamento do corpo -->
+</html> <!-- Fechamento do documento HTML --> 

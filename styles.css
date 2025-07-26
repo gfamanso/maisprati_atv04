@@ -1,0 +1,135 @@
+/* Reset do layout para garantir que a aparência do layout fique consistente e previsível*/
+* { /* O * significa todos os elementos da página */
+  margin: 0; /* remove espaços externos (margens) */
+  padding: 0; /* remove espaços internos (preenchimento) */
+  box-sizing: border-box; /* controla melhor o tamanho dos elementos, contando a borda e o preenchimento dentro da largura total */
+}
+
+/* Variáveis */
+:root { /* representa o elemento <html> onde define-se variáveis CSS com --nome */ 
+  --cor-primaria: #0077cc; /* Pode-se usá-la em outros lugares com var(--cor-primaria) */
+  --cor-secundaria: #f0f0f0;
+  --cor-texto: #333;
+  --fonte-principal: 'Roboto', sans-serif;
+}
+
+/* Estilo do Corpo do site: define-se o estilo geral da página*/
+body {
+  font-family: var(--fonte-principal); /* fonte principal definida com variável */
+  background-color: var(--cor-secundaria); /* cor de fundo clara definida anteriormente*/
+  color: var(--cor-texto); /* cor do texto definida anteriormente */
+  line-height: 1.6; /* altura das linhas (espaçamento entre linhas) */
+  padding: 20px; /* espaço interno do body, para o conteúdo não colar nas bordas da tela */
+}
+
+/* Cabeçalho: define-se o estilo e parâmetros */
+header {
+  background-color: var(--cor-primaria); /* Fundo na cor definida anteriormente */
+  color: white; /* texto branco */
+  text-align: center; /* centralizado */
+  padding: 20px; /* espaço interno para o conteúdo não colar nas bordas da tela */
+  border-radius: 8px; /* bordas arredondadas */
+  margin-bottom: 20px; /* espaço abaixo do cabeçalho */
+  transition: background-color 0.3s ease; /* adiciona animação suave ao mudar a cor */
+}
+
+header:hover { /* Quando o mouse passa por cima do cabeçalho, a cor muda suavemente */
+  background-color: #005fa3;
+}
+
+header img { /* Define-se o tamanho fixo da imagem de perfil*/
+  width: 150px; 
+  height: 150px; 
+  object-fit: cover; /* corta a imagem para preencher o espaço sem distorcer */
+  border-radius: 50%; /* transforma em um círculo */
+  margin-top: 10px; /* espaço acima da imagem */
+}
+
+
+nav ul { /* Menu de navegação */ 
+  list-style: none; /* Remove os marcadores da lista */ 
+  display: flex; /* Exibe os itens da lista um ao lado do outro */
+  justify-content: center; /* Centraliza os itens */
+  gap: 20px; /* espaço entre os itens */
+  margin: 20px 0; /* adiciona espaçamento externo acima e abaixo do menu */
+}
+
+nav a { 
+  text-decoration: none; /* Tira o sublinhado dos links e define a cor (escolhida anteriormente) com transição suave */
+  color: var(--cor-primaria);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav a:hover { /* Quando o mouse passa, a cor muda */
+  color: #004d80;
+}
+
+/* Seção com conteúdo principal */
+main {
+  max-width: 800px; /* Limita a largura máxima a 800px */
+  margin: auto; /* centraliza o conteúdo na página */ 
+}
+
+section { /* Aplica estilo para todos os elementos <section> HTML*/
+  background-color: white; /* Define fundo branco para cada bloco de conteúdo */
+  padding: 20px; /* Adiciona espaçamento interno de 20 pixels em todos os lados da seção evitando que o texto fique colado nas bordas da caixa*/ 
+  border-radius: 6px; /* Deixa os cantos da seção levemente arredondados com raio de 6 pixels */ 
+  margin-bottom: 20px; /* Adiciona espaço externo abaixo de cada seção */
+  box-shadow: 0 0 8px rgba(0,0,0,0.05); /* Aplica uma sombra suave ao redor da seção da seguinte forma: 
+  0: deslocamento horizontal (nenhum)
+  0: deslocamento vertical (nenhum)
+  8px: desfoque (a sombra fica espalhada)
+  rgba(0,0,0,0.05) → cor da sombra: preto com 5% de opacidade (quase transparente)
+  */
+}
+
+section h2 { /* Aplica o estilo abaixo a todos os elementos <h2> que estão dentro de uma <section> */
+  margin-bottom: 10px; /* Adiciona espaço entre o título e o conteúdo da seção (10 pixels de margem na parte inferior do título <h2>) */
+}
+
+/* Esse seletor aplica os estilos a todos os elementos <article> da página.
+<article> é usada para conteúdos independentes dentro de uma seção, como um depoimento, uma publicação, ou uma história */
+article {
+  margin-top: 10px; /* Adiciona espaço acima de cada <article> */ 
+  padding: 10px; /* Adiciona espaço interno de 10 pixels em todos os lados do artigo (superior, inferior, esquerda e direita). */
+  border-left: 4px solid var(--cor-primaria); /* Cria uma borda do lado esquerdo da caixa com:
+                                                Espessura: 4px
+                                                Estilo: solid (linha contínua)
+                                                Cor: var(--cor-primaria) — variável definida anteriormente */
+  background-color: #f9f9f9; /* Define a cor de fundo do artigo */
+  border-radius: 4px; /* Arredonda os cantos da caixa do artigo */
+}
+
+/* Esse seletor aplica os estilos a todos os elementos <aside> */
+aside { /* usada para informações complementares ao conteúdo principal, como links de redes sociais, sugestões de leitura, ou até um bloco */
+  background-color: #e8f4ff; /* define a cor de fundo */
+  padding: 15px; /* Adiciona espaçamento interno de 15 pixels em todos os lados */
+  border-radius: 6px; /* Arredonda os cantos da caixa com raio de 6 pixels*/
+  margin: 20px auto; /* 20px no topo e embaixo → Cria espaço acima e abaixo do aside.
+                        auto nas laterais → Centraliza a caixa horizontalmente*/
+  max-width: 800px; /* Define uma largura máxima de 800 pixels */
+}
+
+
+/* Aplica os estilos a todos os elementos no final da página */
+footer {
+  text-align: center; /* Centraliza horizontalmente todo o conteúdo de texto dentro do footer */
+  margin-top: 30px; /* Adiciona espaço externo acima do footer */
+  font-size: 14px; /* Define a fonte com 14 pixels de altura */
+  color: #555; /* Define a cor do texto */
+}
+
+/* Responsividade */
+@media (max-width: 600px) { /* usada para aplicar regras de estilo somente quando a tela tem no máximo 600 pixels de largura.
+  Se a tela tiver 600 pixels de largura ou menos, executará o código que estiver dentro deste bloco */
+  nav ul { /* Seleciona o <ul> (lista não ordenada) dentro do menu de navegação <nav> */
+    flex-direction: column; /* Altera o layout dos itens do menu para ficarem em coluna (um embaixo do outro), em vez de lado a lado. */
+    align-items: center; /* Centraliza os itens do menu horizontalmente no centro da tela */
+  }
+
+  header img { /* Seleciona qualquer imagem dentro do <header> e define a imagem com 100 pixels de largura e altura em telas pequenas */
+    width: 100px; /* */ 
+    height: 100px;/* */ 
+  }
+}
